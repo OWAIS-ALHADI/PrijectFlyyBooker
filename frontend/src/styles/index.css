@@ -100,6 +100,18 @@ button:hover {
   justify-content: center;
   gap: 0.5rem;
 }
+/* style the landing-page */
+#landing-page {
+  text-align : center;
+}
+#landing-page>li{
+font-size:medium ;
+}
+#hotel {
+  width: 50%;
+  height: auto;
+  border-radius: 2rem;
+}
 
 .flight p {
   margin: 5px 0;

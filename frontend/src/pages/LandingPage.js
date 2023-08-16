@@ -2,8 +2,13 @@ import React from "react";
 
 const LandingPage = () => {
   return (
-    <div className="landing-page">
-      <h1>Welcome to Our Services</h1>
+    <div id="landing-page">
+      <h1>Welcome to Our Services !</h1>
+      <img
+        src="/images/hotel.jpg" 
+        alt="hotel"
+        id="hotel"
+      />
       <p>Explore the range of services we provide to make your travel experience exceptional:</p>
       <ul>
         <li>Flight Booking</li>
