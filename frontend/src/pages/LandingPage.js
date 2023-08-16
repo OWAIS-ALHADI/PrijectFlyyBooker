@@ -9,13 +9,11 @@ const LandingPage = () => {
         alt="hotel"
         id="hotel"
       />
-      <p>Explore the range of services we provide to make your travel experience exceptional:</p>
-      <ul id="service-list">
-        <li>Flight Booking</li>
-        <li>Hotel Reservations</li>
-        <li>Car Rentals</li>
-        <li>Tour Packages</li>
-      </ul>
+      <h2>Explore the range of services we provide to make your travel experience exceptional:</h2>
+        <h3>Flight Booking</h3>
+        <h3>Hotel Reservations</h3>
+        <h3>Car Rentals</h3>
+        <h3>Tour Packages</h3>
     </div>
   );
 };
