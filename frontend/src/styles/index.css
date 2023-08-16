@@ -101,7 +101,7 @@ button:hover {
   gap: 0.5rem;
 }
 /* style the landing-page */
-#landing-page>h1 {
+#landing-page {
   text-align : center;
 }
 #service-list {
