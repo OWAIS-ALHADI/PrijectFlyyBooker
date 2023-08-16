@@ -10,40 +10,30 @@ const Nav = () => {
         Flybooker
       </a>
       <ul id="nav">
-        {keycloak.authenticated &&
+        {keycloak.authenticated && (
           <li>
-            <a href="/secured">
-              Flights
-            </a>
+            <a href="/secured">Flights</a>
           </li>
-        }
-        {keycloak.authenticated && keycloak.hasRealmRole("admin") &&
+        )}
+        {keycloak.authenticated && keycloak.hasRealmRole("admin") && (
           <li>
-            <a id="admin" href="/admin">
-              Flights (Admin)
-            </a>
+            <a id="admin" href="/admin">Flights (Admin)</a>
           </li>
-        }
+        )}
         <li>
-          {!keycloak.authenticated && (
-            <button
-              type="button"
-              onClick={() => keycloak.login()}
-            >
+          {!keycloak.authenticated ? (
+            <button type="button" onClick={() => keycloak.login()}>
               Log in
             </button>
-          )}
-
-          {keycloak.authenticated && (
-            <button
-              type="button"
-              onClick={() => {
-                keycloak.logout();
-              }}
-            >
+          ) : (
+            <button type="button" onClick={() => keycloak.logout()}>
               Logout ({keycloak.tokenParsed.preferred_username})
             </button>
           )}
+        </li>
+        {/* New Landing Page Link */}
+        <li>
+          <a href="/landing">Landing Page</a>
         </li>
       </ul>
     </nav>

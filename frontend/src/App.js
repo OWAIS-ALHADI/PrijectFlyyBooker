@@ -6,31 +6,33 @@ import Nav from "./components/Nav";
 import HomePage from "./pages/Homepage";
 import SecuredPage from "./pages/Securedpage";
 import Superpage from "./pages/Superpage";
+import LandingPage from "./pages/LandingPage"; // Import the LandingPage component
 import PrivateRoute from "./helpers/PrivateRoute";
 
 const App = () => {
   return (
     <div>
-      <ReactKeycloakProvider authClient={keycloak} initOptions={{
-        pkceMethod: 'S256'
-      }}>
-        <Nav />
+      <ReactKeycloakProvider authClient={keycloak} initOptions={{ pkceMethod: 'S256' }}>
         <BrowserRouter>
+          <Nav />
           <Routes>
-            <Route exact path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/landing" element={<LandingPage />} /> {/* New landing page route */}
             <Route
               path="/secured"
               element={
                 <PrivateRoute>
                   <SecuredPage />
-                </PrivateRoute>}
+                </PrivateRoute>
+              }
             />
             <Route
-              path="admin"
+              path="/admin"
               element={
                 <PrivateRoute>
                   <Superpage />
-                </PrivateRoute>}
+                </PrivateRoute>
+              }
             />
           </Routes>
         </BrowserRouter>
