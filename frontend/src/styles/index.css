@@ -101,11 +101,11 @@ button:hover {
   gap: 0.5rem;
 }
 /* style the landing-page */
-#landing-page {
+#landing-page>h1 {
   text-align : center;
 }
-#landing-page>li{
-font-size:medium ;
+#service-list {
+  text-align: center;
 }
 #hotel {
   width: 50%;

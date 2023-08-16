@@ -33,7 +33,7 @@ const Nav = () => {
         </li>
         {/* New Landing Page Link */}
         <li>
-          <a href="/landing">Landing Page</a>
+          <a href="/landing">Landing</a>
         </li>
       </ul>
     </nav>
