@@ -10,6 +10,12 @@ const Nav = () => {
         Flybooker
       </a>
       <ul id="nav">
+        {/* New Landing Page Link */}
+        {keycloak.authenticated && (
+          <li>
+            <a href="/landing">Landing</a>
+          </li>
+        )}
         {keycloak.authenticated && (
           <li>
             <a href="/secured">Flights</a>
@@ -30,10 +36,6 @@ const Nav = () => {
               Logout ({keycloak.tokenParsed.preferred_username})
             </button>
           )}
-        </li>
-        {/* New Landing Page Link */}
-        <li>
-          <a href="/landing">Landing</a>
         </li>
       </ul>
     </nav>
