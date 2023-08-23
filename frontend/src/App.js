@@ -16,8 +16,15 @@ const App = () => {
         <BrowserRouter>
           <Nav />
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/landing" element={<LandingPage />} /> {/* New landing page route */}
+            <Route path="/" element={<HomePage />} /> 
+            <Route                  // New landing page route           
+              path="/landing" 
+              element={
+                <PrivateRoute>
+                  <LandingPage />
+                </PrivateRoute> 
+              } 
+            /> 
             <Route
               path="/secured"
               element={
